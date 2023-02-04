@@ -1,0 +1,25 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: NITIN MUKESH
+// 
+// Create Date: 04.02.2023 23:12:19
+// Design Name: 
+// Module Name: Full_Adder_GATE LEVEL MODELLING STYLE
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Full_Adder(input a,b,cin,
+output s,cout
+    );
+    
+wire t1,t2,t3;
+
+assign t1 = a^b;
+assign s = t1^cin;
+assign t3 = t1&cin;
+assign t2 = a&b;
+assign cout = t3^t2;
+
+endmodule
